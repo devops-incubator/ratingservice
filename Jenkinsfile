@@ -3,7 +3,7 @@ pipeline {
   environment {
     PROJECT = "srinag"
     APP_NAME = "ratingservice"
-    FE_SVC_NAME = "${APP_NAME}-adservice"
+    FE_SVC_NAME = "${APP_NAME}-ratingservice"
     CLUSTER = "hipstar"
     CLUSTER_ZONE = "us-central1-c"
     IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}"
@@ -64,7 +64,7 @@ spec:
         container('kubectl') {
           
           sh "gcloud container clusters get-credentials hipstar --zone us-central1-c --project srinag"
-          sh "kubectl apply -f adservice.yaml"
+          sh "kubectl apply -f ratingservice.yaml"
         }
       }
     }
