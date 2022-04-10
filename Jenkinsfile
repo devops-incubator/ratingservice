@@ -2,7 +2,7 @@ pipeline {
 
   environment {
     PROJECT = "srinag"
-    APP_NAME = "adservice"
+    APP_NAME = "ratingservice"
     FE_SVC_NAME = "${APP_NAME}-adservice"
     CLUSTER = "hipstar"
     CLUSTER_ZONE = "us-central1-c"
